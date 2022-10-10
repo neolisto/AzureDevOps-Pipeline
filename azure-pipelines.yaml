@@ -1,0 +1,18 @@
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+name: $(Build.SourceBranchName)_$(Build.BuildId)
+
+stages:
+
+  - stage: build
+    dependsOn: []
+    displayName: 'Run BUILD Pipeline'
+    jobs:
+      - template: build-pipeline.yaml
+        parameters:
+          Env: 'TEST'
