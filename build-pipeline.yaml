@@ -32,8 +32,7 @@
           dotnet build;
           cd ClientApp/ ;
           sudo npm install forever -g;
-          sudo npm install -g @angular/cli ;          
-          #sudo forever start node_modules/@angular/cli/bin/ng serve --host 142.132.183.11 ;
+          sudo npm install -g @angular/cli ; 
           ls -l ;
           ps -aux | grep forever
         displayName: "Installing AngularCLI"
