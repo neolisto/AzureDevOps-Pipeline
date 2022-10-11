@@ -26,5 +26,5 @@
           cd Test%20pt.1/ClientApp/ && sudo npm install -g @angular/cli && ls -l
         displayName: "Installing AngularCLI"
       - bash:
-          ls -l && sudo npm install -g n && npm -v && sudo n lts && sudo n prune && sudo ng build && ls -l
+          cd Test%20pt.1/ClientApp/ && sudo npm install -g n && npm -v && sudo n lts && sudo n prune && sudo ng build && ls -l
         displayName: "configuring and application"
