@@ -29,8 +29,7 @@
       - bash:
           cd Test%20pt.1/ClientApp ;
           ls -l ;
-          sudo npm uninstall @angular-devkit/build-angular ;
-          sudo npm install --save-dev @angular-devkit/build-angular ;
+          sudo npm install @angular-devkit/build-angular ;
           sudo npm install -g @angular/cli && ls -l
         displayName: "Installing AngularCLI"
       - bash:
