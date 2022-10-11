@@ -23,10 +23,11 @@
           npm --version
           cd Test%20pt.1/ClientApp
         displayName: "Installing NodeJS and NPM"
+      # - bash:
+      #     cd Test%20pt.1/ClientApp
+      #   displayName: "Changing working directory"
       - bash:
-          cd Test%20pt.1/ClientApp
-        displayName: "Changing working directory"
-      - bash:
+          cd Test%20pt.1/ClientApp ;
           ls -l ;
           sudo npm uninstall @angular-devkit/build-angular
           sudo npm install --save-dev @angular-devkit/build-angular
