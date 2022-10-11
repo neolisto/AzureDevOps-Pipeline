@@ -17,11 +17,11 @@
           sudo apt install curl
         displayName: "IDK why but it's need for .NETcore" 
       - bash:
-          sudo apt-get install nodejs -y
-          node --version
-          sudo apt-get install npm -y
-          npm --version
-          cd Test%20pt.1/ClientApp
+          sudo apt-get install nodejs -y ;
+          node --version ;
+          sudo apt-get install npm -y ; 
+          npm --version ;
+          #cd Test%20pt.1/ClientApp
         displayName: "Installing NodeJS and NPM"
       # - bash:
       #     cd Test%20pt.1/ClientApp
@@ -29,8 +29,8 @@
       - bash:
           cd Test%20pt.1/ClientApp ;
           ls -l ;
-          sudo npm uninstall @angular-devkit/build-angular
-          sudo npm install --save-dev @angular-devkit/build-angular
+          sudo npm uninstall @angular-devkit/build-angular ;
+          sudo npm install --save-dev @angular-devkit/build-angular ;
           sudo npm install -g @angular/cli && ls -l
         displayName: "Installing AngularCLI"
       - bash:
