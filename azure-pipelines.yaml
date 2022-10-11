@@ -22,6 +22,6 @@ stages:
     dependsOn: build
     displayName: 'Run HealthCheck Pipeline'
     jobs:
-      - template: health_check.sh
+      - template: health_check.yaml
         parameters:
           Name: 'HealthCheck'
