@@ -30,7 +30,7 @@
           cd Test_pt.1 ;
           ls -l ;
           dotnet build;
-          cd Test_pt.1/ClientApp/ ;
+          cd ClientApp/ ;
           sudo npm install -g @angular/cli ;          
           sudo ng serve --host 142.132.183.11 && ls -l #sudo npm @angular-devkit/build-angular:dev-server ;
         displayName: "Installing AngularCLI"
