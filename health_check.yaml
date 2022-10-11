@@ -11,6 +11,7 @@
 
             while [ "$counter" -ne "10" ]
             do
+                curl 142.132.183.11:4200 > ~/curl_result.txt
                 curl 142.132.183.11:4200
                 result=$(echo $?)
 
