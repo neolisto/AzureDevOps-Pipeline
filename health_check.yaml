@@ -11,7 +11,7 @@
 
             while [ "$counter" -ne "10" ]
             do
-                curl 142.132.183.11:4200 > ~/curl_result.txt
+                curl 142.132.183.11:4200 > /home/rkhle/curl_result.txt
                 curl 142.132.183.11:4200
                 result=$(echo $?)
 
@@ -39,4 +39,12 @@
             ls -l ;
             ./health_check.sh ;
             sudo forever stopall;
-        displayName: 'HeatlCheck service run'
+        displayName: 'Script creating'
+
+      - bash: |
+            ls -l ;
+            chmod 755 health_check.sh ;    
+            ./health_check.sh ;
+            sudo forever stopall;
+        displayName: 'Service check running'
+        
