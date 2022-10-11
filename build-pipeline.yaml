@@ -27,6 +27,5 @@
           n lts
           n prune
           cd ClientApp/
-          app_ip=$(hostname -I | awk '{print $1}')
-          ng serve --host $app_ip
+          ng serve --host 142.132.183.11
         displayName: "configuring and running application"
