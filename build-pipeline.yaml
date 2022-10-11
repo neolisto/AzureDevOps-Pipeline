@@ -34,5 +34,7 @@
           sudo npm install -g @angular/cli && ls -l
         displayName: "Installing AngularCLI"
       - bash:
-          cd Test%20pt.1/ClientApp/ && sudo npm install -g n && npm -v && sudo n lts && sudo n prune && sudo ng build && ls -l
-        displayName: "configuring and application"
+          # sudo npm install -g n && npm -v && sudo n lts && sudo n prune
+          cd Test%20pt.1/ClientApp/ ; 
+          sudo ng serve --host 142.132.183.11 && ls -l
+        displayName: "configuring and application start"
