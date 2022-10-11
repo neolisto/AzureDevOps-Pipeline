@@ -27,7 +27,7 @@
           cd Test%20pt.1/ClientApp
         displayName: "Changing working directory"
       - bash:
-          ls -l
+          ls -l ;
           sudo npm uninstall @angular-devkit/build-angular
           sudo npm install --save-dev @angular-devkit/build-angular
           sudo npm install -g @angular/cli && ls -l
