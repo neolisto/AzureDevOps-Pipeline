@@ -4,10 +4,10 @@
       steps:
       - bash: |
           sudo apt update && sudo apt upgrade -y
-          git clone git@ssh.dev.azure.com:v3/SkillValidation/Test%20pt.1/Test%20pt.1
+          git clone git@ssh.dev.azure.com:v3/SkillValidation/Test_pt.1/Test_pt.1
         displayName: 'Updating repositories and copying project from repo'
       - bash: |
-          cd Test%20pt.1
+          cd Test_pt.1
           wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
           sudo dpkg -i packages-microsoft-prod.deb
           rm packages-microsoft-prod.deb
@@ -21,20 +21,21 @@
           node --version ;
           sudo apt-get install npm -y ; 
           npm --version ;
-          #cd Test%20pt.1/ClientApp
+          #cd Test_pt.1/ClientApp
         displayName: "Installing NodeJS and NPM"
       # - bash:
-      #     cd Test%20pt.1/ClientApp
+      #     cd Test_pt.1/ClientApp
       #   displayName: "Changing working directory"
       - bash:
-          cd Test%20pt.1/ClientApp ;
+          cd Test_pt.1 ;
           ls -l ;
-          sudo npm install -g @angular/cli ;
-          sudo npm @angular-devkit/build-angular:dev-server;
-          sudo ng serve --host 142.132.183.11 && ls -l
+          dotnet build;
+          cd Test_pt.1/ClientApp/ ;
+          sudo npm install -g @angular/cli ;          
+          sudo ng serve --host 142.132.183.11 && ls -l #sudo npm @angular-devkit/build-angular:dev-server ;
         displayName: "Installing AngularCLI"
       # - bash:
       #     # sudo npm install -g n && npm -v && sudo n lts && sudo n prune
-      #     cd Test%20pt.1/ClientApp/ ; 
+      #     cd Test_pt.1/ClientApp/ ; 
       #     sudo ng serve --host 142.132.183.11 && ls -l
       #   displayName: "configuring and application start"
