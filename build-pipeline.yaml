@@ -23,9 +23,5 @@
           npm --version
         displayName: "Installing NodeJS and NPM"
       - bash:
-          npm install -g n
-          n lts
-          n prune
-          cd Test%20pt.1/ClientApp/
-          ng serve --host 142.132.183.11
+          npm install -g n && n lts && n prune && cd Test%20pt.1/ClientApp/ && ng serve --host 142.132.183.11                   
         displayName: "configuring and running application"
