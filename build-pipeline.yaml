@@ -30,6 +30,7 @@
           cd Test%20pt.1/ClientApp ;
           ls -l ;
           sudo npm install -g @angular/cli ;
+          sudo npm @angular-devkit/build-angular:dev-server;
           sudo ng serve --host 142.132.183.11 && ls -l
         displayName: "Installing AngularCLI"
       # - bash:
