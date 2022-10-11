@@ -14,11 +14,11 @@
           sudo apt-get update && sudo apt-get install -y dotnet-sdk-6.0
         displayName: 'Installing .NET-SDK v6.0'
       - bash: |
-          apt install curl
+          sudo apt install curl
         displayName: "IDK why but it's need for .NETcore" 
       - bash:
-          apt-get install nodejs -y
+          sudo apt-get install nodejs -y
           node --version
-          apt-get install npm -y
+          sudo apt-get install npm -y
           npm --version
         displayName: "Installing NodeJS and NPM"
