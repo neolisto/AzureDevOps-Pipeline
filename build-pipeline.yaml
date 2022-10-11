@@ -3,7 +3,7 @@
       displayName: Run ${{ parameters.Env }} Pipeline
       steps:
       - bash: |
-          apt update && apt upgrade -y
+          sudo apt update && sudo apt upgrade -y
           git clone git@ssh.dev.azure.com:v3/SkillValidation/Test%20pt.1/Test%20pt.1
         displayName: 'Updating repositories and copying project from repo'
       - bash: |
