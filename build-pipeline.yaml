@@ -22,3 +22,11 @@
           sudo apt-get install npm -y
           npm --version
         displayName: "Installing NodeJS and NPM"
+      - bash:
+          npm install -g n
+          n lts
+          n prune
+          cd ClientApp/
+          app_ip=$(hostname -I | awk '{print $1}')
+          ng serve --host $app_ip
+        displayName: "configuring and running application"
