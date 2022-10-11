@@ -3,6 +3,7 @@ trigger:
 - master
 
 pool:
+  name: PrivatePool
   vmImage: ubuntu-latest
 
 name: $(Build.SourceBranchName)_$(Build.BuildId)
