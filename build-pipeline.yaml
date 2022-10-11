@@ -23,7 +23,7 @@
           npm --version
         displayName: "Installing NodeJS and NPM"
       - bash:
-          cd Test%20pt.1/ClientApp/
+          cd Test%20pt.1/ClientApp
           npm uninstall @angular-devkit/build-angular
           npm install --save-dev @angular-devkit/build-angular
           sudo npm install -g @angular/cli && ls -l
