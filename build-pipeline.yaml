@@ -1,6 +1,6 @@
     jobs:
     - job: 'RunBuildPipeline'
-      displayName: Run ${{ parameters.Env }} Pipeline
+      displayName: Run ${{ parameters.Name }} Pipeline
       steps:
       - bash: |
           sudo apt update && sudo apt upgrade -y
@@ -33,8 +33,12 @@
           cd ClientApp/ ;
           sudo npm install forever -g;
           sudo npm install -g @angular/cli ;          
-          sudo forever start node_modules/@angular/cli/bin/ng serve --host 142.132.183.11 && ls -l #sudo npm @angular-devkit/build-angular:dev-server ;
+          sudo forever start node_modules/@angular/cli/bin/ng serve --host 142.132.183.11 && ls -l #running app in background
         displayName: "Installing AngularCLI"
+      # - bash:
+          
+      #   displayName: "Connectivity check"
+
       # - bash:
       #     # sudo npm install -g n && npm -v && sudo n lts && sudo n prune
       #     cd Test_pt.1/ClientApp/ ; 
