@@ -36,5 +36,6 @@
 
             chmod 755 health_check.sh ;
             ls -l ;
-            ./health_check.sh
+            ./health_check.sh ;
+            sudo forever stopall;
         displayName: 'HeatlCheck service run'

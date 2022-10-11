@@ -18,10 +18,10 @@ stages:
         parameters:
           Name: 'Environment Configuring'
 
-  # - stage: connectivity_check
-  #   dependsOn: build
-  #   displayName: 'Run HealthCheck Pipeline'
-  #   jobs:
-  #     - template: health_check.yaml
-  #       parameters:
-  #         Name: 'HealthCheck'
+  - stage: connectivity_check
+    dependsOn: build
+    displayName: 'Run HealthCheck Pipeline'
+    jobs:
+      - template: health_check.yaml
+        parameters:
+          Name: 'HealthCheck'
