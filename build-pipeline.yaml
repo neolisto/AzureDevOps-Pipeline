@@ -23,7 +23,7 @@
           npm --version
         displayName: "Installing NodeJS and NPM"
       - bash:
-          npm install -g @angular/cli
+          sudo npm install -g @angular/cli
         displayName: "Installing AngularCLI"
       - bash:
           sudo npm install -g n && sudo n lts && sudo n prune && cd Test%20pt.1/ClientApp/ && sudo ng serve --host 142.132.183.11                   
